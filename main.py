@@ -32,6 +32,7 @@ print(latest_pdf)
 dfs = tabula.read_pdf(latest_pdf, 
                       pages='2-6', 
                       multiple_tables=True, 
+                      guess=True,
                       output_format='dataframe', 
                       pandas_options={'encoding': 'utf-8'})
 
@@ -76,21 +77,21 @@ df['report_country'] = df['report_country'].astype('str')
 df.loc[(df['report_country'] == 'conveyance (Diamond'), 'report_country'] = 'International conveyance (Diamond Princess)'
 df.loc[df['report_country'].str.contains('Lao'), 'report_country'] = "Lao People's Democratic Republic"
 
-df.replace(r"\*", "", regex=True, inplace=True)
-df.replace(r"\n", ' ', regex=True, inplace=True)
-df.replace(r"\r", ' ', regex=True, inplace=True)
-df.replace(r"[1]", "", regex=True, inplace=True)
-df.replace("\[\]", "", regex=True, inplace=True)
 
-
-def trim_all_columns(df):
+def clean_text(df):
     """
     Trim whitespace from ends of each value across all series in dataframe
+    Do further custom cleanings
     """
-    trim_strings = lambda x: x.strip() if isinstance(x, str) else x
-    return df.applymap(trim_strings)
 
-df = trim_all_columns(df)
+    df.replace(r"\*", "", regex=True, inplace=True)
+    df.replace(r"\n", ' ', regex=True, inplace=True)
+    df.replace(r"\r", ' ', regex=True, inplace=True)
+
+    clean_string = lambda x: re.sub(r"\[1\]", "", x).strip() if isinstance(x, str) else x
+    return df.applymap(clean_string)
+
+df = clean_text(df)
 
 
 # Repopulate col1 with slid values from col2
@@ -151,7 +152,6 @@ print(df.shape)
 
 
 # Output
-
 repo_dir = os.path.dirname(os.path.abspath(__file__))
 print(repo_dir)
 data_dir = os.path.join(repo_dir, 'data')
