@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.3] - 2020-04-09
+### Changed
+ - Amended list of regions to pick up those where the first character is not read by `tabula-py`.
+ - Amended `region` and `location_type` generation to take care of the above accordingly.
+
 ## [0.2.2] - 2020-04-08
  - Updated README.md
  - Updated CHANGELOG.md
