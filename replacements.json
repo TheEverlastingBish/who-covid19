@@ -1,12 +1,52 @@
 {
-    "Northern Mariana": "Northern Mariana Islands (Commonwealth of the)",
-    "Democratic Republic": "Democratic Republic of the Congo",
-    "United Republic of": "United Republic of Tanzania",
-    "estern Pacific Region": "Western Pacific Region",  
-    "uropean Region": "European Region", 
-    "outh-East Asia Region": "South-East Asia Region", 
-    "astern Mediterranean Region": "Eastern Mediterranean Region", 
-    "egion of the Americas": "Region of the Americas", 
-    "frican Region": "African Region", 
-    "erritories": "Territories"
+    "replacements": {
+        "Northern Mariana": "Northern Mariana Islands (Commonwealth of the)",
+        "Democratic Republic": "Democratic Republic of the Congo",
+        "United Republic of": "United Republic of Tanzania",
+        "estern Pacific Region": "Western Pacific Region",
+        "uropean Region": "European Region",
+        "outh-East Asia Region": "South-East Asia Region",
+        "astern Mediterranean Region": "Eastern Mediterranean Region",
+        "egion of the Americas": "Region of the Americas",
+        "frican Region": "African Region",
+        "erritories": "Territories",
+        "conveyance (Diamond": "International conveyance (Diamond Princess)"
+    },
+    "region_labels": [
+        "Western Pacific Region",
+        "European Region",
+        "South-East Asia Region",
+        "Eastern Mediterranean Region",
+        "Region of the Americas",
+        "African Region",
+        "Territories",
+        "estern Pacific Region",
+        "uropean Region",
+        "outh-East Asia Region",
+        "astern Mediterranean Region",
+        "egion of the Americas",
+        "frican Region",
+        "erritories"
+    ],
+    "column_labels": [
+        "report_country",
+        "confirmed",
+        "confirmed_new",
+        "deaths",
+        "deaths_new",
+        "trans_class",
+        "days_since_last_report"
+    ],
+    "final_column_order": [
+        "report_date",
+        "region",
+        "location_type",
+        "report_country",
+        "confirmed",
+        "confirmed_new",
+        "deaths",
+        "deaths_new",
+        "trans_class",
+        "days_since_last_report"
+    ]
 }

@@ -1,7 +1,11 @@
-numpy==1.18.1
-pandas==1.0.3
+beautifulsoup4==4.8.2
+configparser==3.7.4
 Flask==1.1.1
 Jinja2==2.11.1
+numpy==1.18.1
+pandas==1.0.3
+PyPDF2==1.26.0
 requests==2.23.0
+selenium==3.141.0
 tabula-py==1.4.1
-beautifulsoup4==4.8.2
+Werkzeug==1.0.0

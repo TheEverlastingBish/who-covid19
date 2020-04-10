@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.3.0] - 2020-04-10
+### Changed
+ - Split functions and config into `helper.py` and `config.py`.
+ - Moved more elements over to `replacements.json` than hard-coding.
+ - Replaced all string joining of path to `os.path.join()` for better OS compatibility.
+ - More intelligent dropping of rows using anchor text.
+ - Better console printing.
+
 ## [0.2.3] - 2020-04-09
 ### Changed
  - Amended list of regions to pick up those where the first character is not read by `tabula-py`.
