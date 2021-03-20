@@ -1,7 +1,7 @@
 beautifulsoup4==4.8.2
 configparser==3.7.4
 Flask==1.1.1
-Jinja2==2.11.1
+Jinja2==2.11.3
 numpy==1.18.1
 pandas==1.0.3
 PyPDF2==1.26.0
