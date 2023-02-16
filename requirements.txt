@@ -8,4 +8,4 @@ PyPDF2==1.27.5
 requests==2.23.0
 selenium==3.141.0
 tabula-py==1.4.1
-Werkzeug==1.0.0
+Werkzeug==2.2.3
