@@ -5,7 +5,7 @@ Jinja2==2.11.3
 numpy==1.21.0
 pandas==1.0.3
 PyPDF2==1.27.9
-requests==2.23.0
+requests==2.31.0
 selenium==3.141.0
 tabula-py==1.4.1
 Werkzeug==1.0.0
